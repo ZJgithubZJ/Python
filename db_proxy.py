@@ -9,7 +9,7 @@ import db_engine
 from db_engine import MysqlEngine
 from  datetime import *
 #from pymysql import connect
-db = MysqlEngine(user='root',passwd='51..dmz',host='10.66.108.44',port=3306)
+db = MysqlEngine(user='',passwd='',host='',port=3306)
 
 def ConnectAll():
 	db.connect()
