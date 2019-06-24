@@ -1,5 +1,7 @@
 #!/bin/bash/env python
 #!-*- encoding=utf-8 -*-
+#Auther: ZJ
+
 import os
 import sys
 import MySQLdb

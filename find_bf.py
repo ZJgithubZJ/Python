@@ -1,5 +1,6 @@
 #!/bin/bash/env python
 #!-*- encoding=utf-8 -*-
+#Auther: ZJ
 import os
 def FB(path):
         for filepath,dirs,files in os.walk(path):
