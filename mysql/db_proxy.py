@@ -38,7 +38,7 @@ def WeddingSum(startdate,enddate):
 	allresult = []
 	real_enddate = enddate + one_day
 	while(startdate != real_enddate):
-		sql_as_role = "select a.RoleID,a.ZoneID,loverid,ValueReq from dmz_bill_%s.money as a left join dmz_bill_%s.balance as b on a.roleid = b.roleid and a.zoneid = b.zoneid where a.ChannelID = 0x08030101 and b.loverid<>-1  group by a.roleid,a.zoneid"
+		sql_as_role = "select a.RoleID,a.ZoneID,loverid,ValueReq from dmz_bill_%s.money as a left join dmz_bill_%s.balance as b on a.roleid = b.roleid and a.zoneid = b.zoneid where a.ChannelID = 0x08030101 and b.loverid<>-1  group by a.roleid,a.zoneid;"
 		real_sql = sql_as_role%(startdate.strftime('%Y%m%d'),startdate.strftime('%Y%m%d'))
 		print(real_sql)
 		db.query(real_sql)
