@@ -1,4 +1,4 @@
-#!/bin/bash/env python
+#!/usr/bin/env python
 #!-*- encoding=utf-8 -*-
 
 import dns.resolver
@@ -7,6 +7,7 @@ import http
 import http.client
 import logging
 import socket
+from alarm import monitor
 
 iplist = []
 appdomain = 'app7.wsdo.xnhdgame.com'
@@ -38,7 +39,9 @@ def checkip(ip):
 		if getcontext == "b'200\\n'":
 			print(ip,"ok")
 		else:
-			print(ip,"Error")
+			A = monitor('domain: '+appdomain+' : '+ip+' is down,please check quickly')
+			A.monitor_send()
+			print(ip+' is down and alarm text has been sended to engineer!')
 
 if __name__ == '__main__':
 #	get_iplist(appdomain)
