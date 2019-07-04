@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #!-*- encoding=utf-8 -*-
 """免费套餐下，每个验证手机号每天只能接收5条信息"""
+"""python3.7与最新版的twilio.6.28模块不兼容，需要安装twilio.5.8，坑了我很久"""
 from twilio.rest import Client
 
 class monitor:
