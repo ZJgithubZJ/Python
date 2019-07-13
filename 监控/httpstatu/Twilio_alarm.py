@@ -17,8 +17,8 @@ class monitor:
 			body = self.text,
 			from_='+12056199851'
 		)
-		#print(message.sid)
+		print(message.sid)
 
-#if __name__ == '__main__':
-#	A = monitor("test-5")
-#	A.monitor_send()
+if __name__ == '__main__':
+	A = monitor("test-5")
+	A.monitor_send()
