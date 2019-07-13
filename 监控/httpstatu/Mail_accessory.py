@@ -14,7 +14,7 @@ class Sendmail:
 		#创建实例
 		self.message = MIMEMultipart()
 		self.message['From'] = Header('Proxy_mail','utf-8')
-		self.message['To'] = Header('张健','utf-8')
+		self.message['To'] = Header('ZJ','utf-8')
 		self.message['Subject'] = Header('Python Test','utf-8')
 		#邮件正文
 		self.message.attach(MIMEText('Python 报警邮件测试，详情见附件','plain','utf-8'))
