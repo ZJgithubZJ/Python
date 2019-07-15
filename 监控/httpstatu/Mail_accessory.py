@@ -29,10 +29,11 @@ class Sendmail:
 
 	def sendmail(self):
 		try:
-			server = smtplib.SMTP('smtp.exmail.qq.com')
+			server = smtplib.SMTP_SSL('smtp.exmail.qq.com',465)
 			server.login('zhangjian@xnhd.com','mail passwd')
 			server.sendmail(self.sender,self.receiver,self.message.as_string())
 			print('Mail send succeed!')
+			server.quit()
 		except Exception as e:
 			print('Mail send failed', e)
 if __name__ == '__main__':
