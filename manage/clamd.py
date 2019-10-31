@@ -24,8 +24,8 @@ class scan:
     self.port = port
     self.path = path
   def run(self):
-    cd = pyclamd.ClamdNetworkSocket(self.ip,self.port)
     try:
+      cd = pyclamd.ClamdNetworkSocket(self.ip,self.port)
       if cd.ping():
         print(self.ip+" "+"connection ok...")
       else:
