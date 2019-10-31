@@ -27,9 +27,9 @@ class scan:
     cd = pyclamd.ClamdNetworkSocket(self.ip,self.port)
     try:
       if cd.ping():
-        print('Connection OK...')
+        print(self.ip+" "+"connection ok...")
       else:
-        print('Connection Error!')
+        print(self.ip+" "+"connection error...")
         return
       cd.reload()
       '''
@@ -38,7 +38,7 @@ class scan:
       '''
       print(cd.contscan_file(self.path))
     except Exception as e:
-      print(self.ip + str(e))
+      print(self.ip+" "+str(e))
 
 IPs = ['10.105.70.21']
 port = 3310
