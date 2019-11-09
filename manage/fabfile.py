@@ -5,10 +5,16 @@ from fabric import *
 
 @task
 def webtask(c):
-	c.run('df -h')
+	try:
+		c.run('df -h')
+	except Exception as e:
+		print(str(e))
 @task
 def dbtask(c):
-	c.run('free -m')
+	try:
+		c.run('free -m')
+	except Exception as e:
+		print(str(e))
 
 @task
 def all(c):
